@@ -1,6 +1,8 @@
 package sooper.demo.util;
 
 import java.awt.EventQueue;
+import java.awt.Window;
+
 import javax.swing.JFrame;
 
 import sooper.demo.tkrun.SupermercadoController;
@@ -64,8 +66,8 @@ public class SwingMain {
 				SupermercadoController controller = new SupermercadoController();
 				SupermercadoView vista = new SupermercadoView(controller);
 				SupermercadoModel modelo = new SupermercadoModel();
-				
 				controller.setVistaModel(vista, modelo);
+				frame.setVisible(false);
 				
 				}
 		}

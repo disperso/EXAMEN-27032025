@@ -12,6 +12,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.table.DefaultTableModel;
 
+
+
 public class SupermercadoView {
 
 	protected JFrame frmSupermercado;
@@ -92,6 +94,23 @@ public class SupermercadoView {
 		scrollPane_1.setViewportView(tablaEmbolsados);
 		
 		btnEnvioAlmacen = new JButton("Enviar a almacén");
+		btnEnvioAlmacen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				frmSupermercado.setVisible(false);
+				
+				VentanaController controller2 = new VentanaController();
+				VentanaView vista2 = new VentanaView(controller2);
+				VentanaModel modelo2 = new VentanaModel();	
+				controller2.setVistaModel(vista2, modelo2);
+		
+				
+			
+				
+				
+			}
+		});
 		frmSupermercado.getContentPane().add(btnEnvioAlmacen, "cell 0 5");
 		frmSupermercado.setVisible(true);
 	}
